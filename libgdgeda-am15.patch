@@ -1,0 +1,12 @@
+--- libgdgeda-1.8/src/Makefile.am~	Sat Mar 23 12:57:16 2002
++++ libgdgeda-1.8/src/Makefile.am	Sat Mar 23 12:57:16 2002
+@@ -4,9 +4,6 @@
+ # level Makefile.
+ AUTOMAKE_OPTIONS = foreign
+ 
+-EXTRA_DIST = 
+-
+-
+ # Build a libtool library, libhello.la for installation in libdir.
+ lib_LTLIBRARIES = libgdgeda.la
+ libgdgeda_la_SOURCES = \
