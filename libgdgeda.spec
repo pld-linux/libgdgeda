@@ -9,6 +9,9 @@ Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	Библиотеки
+Group(uk):	Б╕бл╕отеки
 BuildRequires:	zlib-devel
 BuildRequires:	libpng-devel
 Source0:	ftp://ftp.geda.seul.org/pub/geda/devel/support/%{name}-%{version}.tar.gz
