@@ -28,7 +28,7 @@ rezultacie zapisywanie ich do pliku .PNG.
 
 %package devel
 Summary:	Header files and develpment documentation for libgdgeda
-Summary(pl):	Pliki nag³ówkowe i dokumetacja do libgdgeda
+Summary(pl):	Pliki nag³ówkowe i dokumentacja do libgdgeda
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 Requires:	libpng-devel
@@ -37,7 +37,7 @@ Requires:	libpng-devel
 Header files and develpment documentation for libgdgeda.
 
 %description devel -l pl
-Pliki nag³ówkowe i dokumetacja do libgdgeda.
+Pliki nag³ówkowe i dokumentacja do libgdgeda.
 
 %package static
 Summary:	Static libgdgeda library
