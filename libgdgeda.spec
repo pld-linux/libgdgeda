@@ -2,13 +2,16 @@ Summary:	hack of libgd library for gEDA project
 Summary(pl):	Zmodyfikowana wersja libgd dla projektu gEDA
 Name:		libgdgeda
 Version:	1.8
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
-BuildRequires:	zlib-devel
-BuildRequires:	libpng-devel
 Source0:	ftp://ftp.geda.seul.org/pub/geda/devel/support/%{name}-%{version}.tar.gz
+Patch0:		%{name}-am15.patch
 URL:		http://www.geda.seul.org/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libpng-devel
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -49,8 +52,14 @@ Biblioteka statyczna libgdgeda.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+rm -f acinclude.m4
+libtoolize --copy --force
+aclocal
+autoconf
+automake -a -c -f
 %configure
 %{__make}
 
