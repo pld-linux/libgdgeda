@@ -1,12 +1,12 @@
 Summary:	Hack of libgd library for gEDA project
 Summary(pl):	Zmodyfikowana wersja libgd dla projektu gEDA
 Name:		libgdgeda
-Version:	1.8
-Release:	2
+Version:	2.0.15
+Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftp.geda.seul.org/pub/geda/devel/support/%{name}-%{version}.tar.gz
-# Source0-md5:	18e62c4a66c33e00dff366578e71638b
+# Source0-md5:	1580beb2bd224f38ce8637c67a5512f8
 Patch0:		%{name}-am15.patch
 URL:		http://www.geda.seul.org/
 BuildRequires:	autoconf
@@ -53,7 +53,7 @@ Biblioteka statyczna libgdgeda.
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
 
 %build
 rm -f missing acinclude.m4
@@ -79,7 +79,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README* COPY*
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/lib*.so.*.* 
+%{_libdir}/pkgconfig/libgdgeda.pc
+
 
 %files devel
 %defattr(644,root,root,755)
