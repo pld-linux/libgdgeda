@@ -55,7 +55,7 @@ Biblioteka statyczna libgdgeda.
 %patch0 -p1
 
 %build
-rm -f acinclude.m4
+rm -f missing acinclude.m4
 libtoolize --copy --force
 aclocal
 autoconf
