@@ -57,7 +57,7 @@ Biblioteka statyczna libgdgeda.
 %build
 rm -f missing acinclude.m4
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
