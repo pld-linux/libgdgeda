@@ -3,11 +3,10 @@ Summary(pl):	Zmodyfikowana wersja libgd dla projektu gEDA
 Name:		libgdgeda
 Version:	2.0.15
 Release:	1
-License:	GPL
+License:	BSD-like
 Group:		Libraries
 Source0:	ftp://ftp.geda.seul.org/pub/geda/devel/support/%{name}-%{version}.tar.gz
 # Source0-md5:	1580beb2bd224f38ce8637c67a5512f8
-Patch0:		%{name}-am15.patch
 URL:		http://www.geda.seul.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -32,6 +31,7 @@ Summary:	Header files and develpment documentation for libgdgeda
 Summary(pl):	Pliki nag³ówkowe i dokumetacja do libgdgeda
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	libpng-devel
 
 %description devel
 Header files and develpment documentation for libgdgeda.
@@ -53,13 +53,12 @@ Biblioteka statyczna libgdgeda.
 
 %prep
 %setup -q
-#%patch0 -p1
 
 %build
-rm -f missing acinclude.m4
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
@@ -70,25 +69,24 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
-%doc README* COPY*
+%doc README.1ST COPYING
 %attr(755,root,root) %{_libdir}/lib*.so.*.* 
-%{_libdir}/pkgconfig/libgdgeda.pc
-
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*-config
-%{_includedir}/gdgeda
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
+%{_includedir}/gdgeda
+%{_pkgconfigdir}/libgdgeda.pc
 
 %files static
 %defattr(644,root,root,755)
