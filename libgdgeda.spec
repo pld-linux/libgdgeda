@@ -1,4 +1,4 @@
-Summary:	hack of libgd library for gEDA project
+Summary:	Hack of libgd library for gEDA project
 Summary(pl):	Zmodyfikowana wersja libgd dla projektu gEDA
 Name:		libgdgeda
 Version:	1.8
