@@ -32,7 +32,7 @@ Requires:	%{name} = %{version}
 %description devel
 Header files and develpment documentation for libgdgeda.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe i dokumetacja do libgdgeda.
 
 %package static
@@ -44,7 +44,7 @@ Requires:	%{name}-devel = %{version}
 %description static
 Static libgdgeda library.
 
-%description -l pl static
+%description static -l pl
 Biblioteka statyczna libgdgeda.
 
 %prep
