@@ -58,8 +58,8 @@ Biblioteka statyczna libgdgeda.
 rm -f missing acinclude.m4
 libtoolize --copy --force
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
