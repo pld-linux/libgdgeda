@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftp.geda.seul.org/pub/geda/devel/support/%{name}-%{version}.tar.gz
+# Source0-md5:	18e62c4a66c33e00dff366578e71638b
 Patch0:		%{name}-am15.patch
 URL:		http://www.geda.seul.org/
 BuildRequires:	autoconf
