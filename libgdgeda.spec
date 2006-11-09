@@ -31,7 +31,7 @@ rezultacie zapisywanie ich do pliku .PNG.
 Summary:	Header files and develpment documentation for libgdgeda
 Summary(pl):	Pliki nag³ówkowe i dokumentacja do libgdgeda
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	libpng-devel
 
 %description devel
@@ -44,7 +44,7 @@ Pliki nag³ówkowe i dokumentacja do libgdgeda.
 Summary:	Static libgdgeda library
 Summary(pl):	Biblioteka statyczna libgdgeda
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libgdgeda library.
@@ -79,7 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.1ST COPYING
-%attr(755,root,root) %{_libdir}/lib*.so.*.* 
+%attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
