@@ -1,5 +1,5 @@
 Summary:	Hack of libgd library for gEDA project
-Summary(pl):	Zmodyfikowana wersja libgd dla projektu gEDA
+Summary(pl.UTF-8):   Zmodyfikowana wersja libgd dla projektu gEDA
 Name:		libgdgeda
 Version:	2.0.15
 Release:	1
@@ -21,15 +21,15 @@ your code to quickly draw images complete with lines, arcs, text,
 multiple colors, cut and paste from other images, and flood fills, and
 write out the result as a .PNG file.
 
-%description -l pl
-libgdgeda jest zmodyfikowan± bibliotek± libgd pozwalaj±c± na szybkie
-rysowanie obrazków z liniami, ³ukami, tekstem, wieloma kolorami oraz
-kopiowanie i wklejanie z innych obrazków, wype³nianie wzorcami, a w
+%description -l pl.UTF-8
+libgdgeda jest zmodyfikowanÄ… bibliotekÄ… libgd pozwalajÄ…cÄ… na szybkie
+rysowanie obrazkÃ³w z liniami, Å‚ukami, tekstem, wieloma kolorami oraz
+kopiowanie i wklejanie z innych obrazkÃ³w, wypeÅ‚nianie wzorcami, a w
 rezultacie zapisywanie ich do pliku .PNG.
 
 %package devel
 Summary:	Header files and develpment documentation for libgdgeda
-Summary(pl):	Pliki nag³ówkowe i dokumentacja do libgdgeda
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe i dokumentacja do libgdgeda
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libpng-devel
@@ -37,19 +37,19 @@ Requires:	libpng-devel
 %description devel
 Header files and develpment documentation for libgdgeda.
 
-%description devel -l pl
-Pliki nag³ówkowe i dokumentacja do libgdgeda.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe i dokumentacja do libgdgeda.
 
 %package static
 Summary:	Static libgdgeda library
-Summary(pl):	Biblioteka statyczna libgdgeda
+Summary(pl.UTF-8):   Biblioteka statyczna libgdgeda
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libgdgeda library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka statyczna libgdgeda.
 
 %prep
