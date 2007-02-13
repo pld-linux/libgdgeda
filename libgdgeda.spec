@@ -1,5 +1,5 @@
 Summary:	Hack of libgd library for gEDA project
-Summary(pl.UTF-8):   Zmodyfikowana wersja libgd dla projektu gEDA
+Summary(pl.UTF-8):	Zmodyfikowana wersja libgd dla projektu gEDA
 Name:		libgdgeda
 Version:	2.0.15
 Release:	1
@@ -29,7 +29,7 @@ rezultacie zapisywanie ich do pliku .PNG.
 
 %package devel
 Summary:	Header files and develpment documentation for libgdgeda
-Summary(pl.UTF-8):   Pliki nagłówkowe i dokumentacja do libgdgeda
+Summary(pl.UTF-8):	Pliki nagłówkowe i dokumentacja do libgdgeda
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libpng-devel
@@ -42,7 +42,7 @@ Pliki nagłówkowe i dokumentacja do libgdgeda.
 
 %package static
 Summary:	Static libgdgeda library
-Summary(pl.UTF-8):   Biblioteka statyczna libgdgeda
+Summary(pl.UTF-8):	Biblioteka statyczna libgdgeda
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
